@@ -1,0 +1,41 @@
+# Composer dependencies
+/vendor/
+composer.lock
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+
+# PHP specific
+*.log
+*.tmp
+*.cache
+*.pid
+
+# Testing
+/coverage/
+/.phpunit.result.cache
+.phpunit.cache
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Test files (should not be committed)
+test*.php
+*test.php

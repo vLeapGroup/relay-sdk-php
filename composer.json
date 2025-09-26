@@ -1,0 +1,38 @@
+{
+  "name": "vleap/relay",
+  "description": "PHP SDK for vLeap Relay service",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "vLeap",
+      "email": "hello@vleap.ai"
+    }
+  ],
+  "require": {
+    "php": "^8.1",
+    "ext-json": "*",
+    "brick/math": "^0.12.3",
+    "guzzlehttp/guzzle": "^7.8",
+    "multiversx/mx-sdk-php": "^0.4"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10.0",
+    "phpstan/phpstan": "^1.10"
+  },
+  "autoload": {
+    "psr-4": {
+      "Vleap\\Relay\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Vleap\\Relay\\Tests\\": "tests/"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
