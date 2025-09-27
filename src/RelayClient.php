@@ -11,11 +11,7 @@ use MultiversX\Transaction;
 use MultiversX\Http\Entities\Account;
 use MultiversX\Http\ClientFactory;
 use MultiversX\Http\NetworkProvider;
-use MultiversX\Address;
 use Brick\Math\BigInteger;
-use Brick\Math\BigNumber;
-use Vleap\Relay\Types\Env;
-use Vleap\Relay\Types\RelayChain;
 use Vleap\Relay\Types\ErrorType;
 use Vleap\Relay\Core\Config;
 use Vleap\Relay\Core\Handlers;
@@ -23,7 +19,6 @@ use Vleap\Relay\Core\RelayerConfig;
 use Vleap\Relay\Core\Logger;
 use Vleap\Relay\Result;
 use Vleap\Relay\ErrorResponse;
-use Vleap\Relay\Core\TransactionHelper;
 
 class RelayClient
 {
@@ -78,7 +73,7 @@ class RelayClient
             return $tx;
         }
 
-        return TransactionHelper::fromArray($result->res['tx']);
+        return Transaction::fromArray($result->res['tx']);
     }
 
     public function relayBatch(array $txs, ?Handlers $handlers = null): array
@@ -117,7 +112,7 @@ class RelayClient
         }
 
         return array_map(
-            fn($tx) => TransactionHelper::fromArray($tx),
+            fn($tx) => Transaction::fromArray($tx),
             $result->res['batch']
         );
     }
