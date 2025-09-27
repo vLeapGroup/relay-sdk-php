@@ -14,7 +14,7 @@
     "ext-json": "*",
     "brick/math": "^0.12.3",
     "guzzlehttp/guzzle": "^7.8",
-    "multiversx/mx-sdk-php": "^0.4"
+    "multiversx/mx-sdk-php": "dev-main"
   },
   "require-dev": {
     "phpunit/phpunit": "^10.0",
@@ -33,6 +33,6 @@
   "config": {
     "sort-packages": true
   },
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
   "prefer-stable": true
 }
