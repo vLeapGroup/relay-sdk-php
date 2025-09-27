@@ -3,7 +3,7 @@
 **Enable gasless transactions on MultiversX with just one line of code change.**
 
 ```bash
-composer require vleap/relay-sdk
+composer require vleap/relay
 ```
 
 **Before:**
